@@ -6,30 +6,44 @@
   <title>Stare Down</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       text-align: center;
-      padding: 50px;
-      background-color: #f0f0f0;
+      padding: 40px;
+      background: #1e1e1e;
+      color: #fff;
     }
-    h1 {
-      color: #333;
-    }
-    a.button {
-      display: inline-block;
+    #clickBtn {
       padding: 10px 20px;
-      background: #007acc;
-      color: white;
-      text-decoration: none;
+      font-size: 18px;
+      background: #00aaff;
+      border: none;
       border-radius: 8px;
-      margin-top: 20px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    a.button:hover {
-      background: #005fa3;
+    #clickBtn:hover {
+      background: #0088cc;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to the Game!</h1>
   <p>Test.</p>
+  <button id="clickBtn">Click Me</button>
+  <div id="output"></div>
+
+  <script>
+    const btn = document.getElementById('clickBtn');
+    const output = document.getElementById('output');
+
+    btn.addEventListener('click', () => {
+      output.textContent = "🎮 Ready to play? Coming soon!";
+    });
+  </script>
 </body>
 </html>
